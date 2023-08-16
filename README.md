@@ -14,8 +14,8 @@ Pretrained models
 | Mobilenet v2 | 96*96       |      0.35       |     -      |  70.7%       |  20    | Not working      |  
 | Mobilenet v2 | 96*96       |      0.1        |     -      |  92.7%       |  20    | Not working      |  
 | Mobilenet v1 | 96*96       |      0.1        |   39.9     |  51.2%       |  20    | Working          |
-| Mobilenet v2 | 96*96       |      0.2        |   21.7     |  80.5%       |  20    | Working          |  
-| Mobilenet v2 | 96*96       |      0.25       |   19.9     |  75.6%       |  20    | Working          |
+| Mobilenet v1 | 96*96       |      0.2        |   21.7     |  80.5%       |  20    | Working          |  
+| Mobilenet v1 | 96*96       |      0.25       |   19.9     |  75.6%       |  20    | Working          |
 
 Custom  models
 
