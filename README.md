@@ -19,8 +19,11 @@ Pretrained models
 
 Custom  models
 
-| Model        | Input shape |  Conv layers | kernel  |  Filters   |   FPS    | Training acc | epochs | Status on openmv |
-| ------------ | ----------- | ------------ | ------- | ---------- | -------- | ------------ | ------ | ---------------- |
-| conv2d       | 96*96       |      3       |   3     |  16,32,32  |  9.1     |    92.7%     |  20    |    Working       |
-| conv2d       | 96*96       |      3       |   3     |  16,32,64  |    -     |    100%      |  20    |  Not  Working    | 
-
+| Model        | Input shape |  Conv layers | kernel  |   Filters           |   FPS    | Training acc | epochs | Status on openmv |
+| ------------ | ----------- | ------------ | ------- | ------------------- | -------- | ------------ | ------ | ---------------- |
+| conv2d       | 96*96       |      3       |   3     |   16,32,32          |   9.1    |    92.7%     |  20    |    Working       |
+| conv2d       | 96*96       |      4       |   3     |   2(16,32)          |   10.1   |    85.5%     |  20    |    Working       | 
+| conv2d       | 96*96       |      6       |   3     |   2(16,32,48)       |   10.4   |    82.9%     |  20    |    Working       | 
+| conv2d       | 96*96       |      8       |   3     | 2(16,32,48,64)      |   10.45  |    53.7%     |  20    |    Working       | 
+| conv2d       | 96*96       |      8       |   3     | 2(16,32,64,128)     |   -      |    73.2%     |  20    |   Not Working    | 
+| conv2d       | 96*96       |      10      |   3     | 2(16,32,64,128,256) |   -      |    56.7%     |  20    |   Not Working    |
