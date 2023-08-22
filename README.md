@@ -8,25 +8,25 @@ Dropout rate is 0.1 in all models.
 
 Pretrained models
 
-| Model        | Input shape | Depth-Multiplier|   FPS      | Training acc | epochs | Status on openmv |
-| ------------ | ----------- | --------------- | ---------- | ------------ | ------ | ---------------- |
-| Mobilenet v2 | 96*96       |      0.05       |    16      |  92.7%       |  20    | Working          |
-| Mobilenet v2 | 96*96       |      0.35       |     -      |  70.7%       |  20    | Not working      |  
-| Mobilenet v2 | 96*96       |      0.1        |     -      |  92.7%       |  20    | Not working      |  
-| Mobilenet v1 | 96*96       |      0.1        |   39.9     |  51.2%       |  20    | Working          |
-| Mobilenet v1 | 96*96       |      0.2        |   21.7     |  80.5%       |  20    | Working          |  
-| Mobilenet v1 | 96*96       |      0.25       |   19.9     |  75.6%       |  20    | Working          |
+| Model        | Input shape | Depth-Multiplier|   FPS      | Training acc | epochs | Status      |  Reson                         |
+| ------------ | ----------- | --------------- | ---------- | ------------ | ------ | ----------- | ------------------------------ |
+| Mobilenet v2 | 96*96       |      0.05       |    16      |  92.7%       |  20    | Working     |     -                          |
+| Mobilenet v2 | 96*96       |      0.35       |     -      |  70.7%       |  20    | Not working | Model memory exceed the limit  |
+| Mobilenet v2 | 96*96       |      0.1        |     -      |  92.7%       |  20    | Not working | Compute expensive              |
+| Mobilenet v1 | 96*96       |      0.1        |   39.9     |  51.2%       |  20    | Working     |     -                          |
+| Mobilenet v1 | 96*96       |      0.2        |   21.7     |  80.5%       |  20    | Working     |     -                          |
+| Mobilenet v1 | 96*96       |      0.25       |   19.9     |  75.6%       |  20    | Working     |     -                          |
 
 Custom  models
 
-| Model        | Input shape |  Conv layers | kernel  |   Filters           |   FPS    | Training acc | epochs | Status on openmv |
-| ------------ | ----------- | ------------ | ------- | ------------------- | -------- | ------------ | ------ | ---------------- |
-| conv2d       | 96*96       |      3       |   3     |   16,32,32          |   9.1    |    92.7%     |  20    |    Working       |
-| conv2d       | 96*96       |      4       |   3     |   2(16,32)          |   10.1   |    85.5%     |  20    |    Working       | 
-| conv2d       | 96*96       |      6       |   3     |   2(16,32,48)       |   10.4   |    82.9%     |  20    |    Working       | 
-| conv2d       | 96*96       |      8       |   3     | 2(16,32,48,64)      |   10.45  |    53.7%     |  20    |    Working       | 
-| conv2d       | 96*96       |      8       |   3     | 2(16,32,48,64)      |   10.45  |    53.7%     |  20    |    Working       | 
-| conv2d       | 96*96       |      8       |   3     | 2(16,32,64,128)     |   -      |    65.9%     |  20    |   Not Working    | 
-| conv2d       | 96*96       |      10      |   3     | 2(16,32,64,128,256) |   -      |    56.7%     |  20    |   Not Working    |
-| conv2d       | 64*64       |      6       |   3     | 2(16,32,64)         |   22.6   |    53.7%     |  20    |    Working       | 
-| conv2d       | 64*64       |      8       |   3     | 2(16,32,64,128)     |   23     |    65.9%     |  20    |    Working       | 
+| Model        | Input shape |  Conv layers | kernel  |   Filters           |   FPS    | Training acc | epochs |  Status     |  Reson                         |
+| ------------ | ----------- | ------------ | ------- | ------------------- | -------- | ------------ | ------ | ----------- | ------------------------------ |
+| conv2d       | 96*96       |      3       |   3     |   16,32,32          |   9.1    |    92.7%     |  20    | Working     |     -                          |
+| conv2d       | 96*96       |      4       |   3     |   2(16,32)          |   10.1   |    85.5%     |  20    | Working     |     -                          | 
+| conv2d       | 96*96       |      6       |   3     |   2(16,32,48)       |   10.4   |    82.9%     |  20    | Working     |     -                          | 
+| conv2d       | 96*96       |      8       |   3     | 2(16,32,48,64)      |   10.45  |    53.7%     |  20    | Working     |     -                          | 
+| conv2d       | 96*96       |      8       |   3     | 2(16,32,48,64)      |   10.45  |    53.7%     |  20    | Working     |     -                          | 
+| conv2d       | 96*96       |      8       |   3     | 2(16,32,64,128)     |   -      |    65.9%     |  20    | Not Working | Compute expensive              | 
+| conv2d       | 96*96       |      10      |   3     | 2(16,32,64,128,256) |   -      |    56.7%     |  20    | Not Working | Model memory exceed the limit  |
+| conv2d       | 64*64       |      6       |   3     | 2(16,32,64)         |   22.6   |    53.7%     |  20    | Working     |     -                          | 
+| conv2d       | 64*64       |      8       |   3     | 2(16,32,64,128)     |   23     |    65.9%     |  20    | Working     |     -                          | 
