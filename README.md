@@ -1,12 +1,15 @@
 # Classification-on-openmv
 
 ## Benchmarks on OpenMV
-Include the benchmark results of model trained on edge impulse. 
-The models are pretrained and finetuned on coustom data taken by OpenMV.
-Depth Multiplier: MobileNet introduces a depth multiplier parameter that controls the number of input and output channels in the depthwise separable convolutions. It's used to reduce the model's complexity and size. A depth multiplier of 1.0 means no reduction, while a depth multiplier less than 1.0 (such as 0.35) reduces the number of channels in each layer.
+Include the benchmark results of model trained on edge impulse.The models are pretrained and finetuned on coustom data taken by OpenMV. <br>
+**Depth Multiplier:**  MobileNet introduces a depth multiplier parameter that controls the number of input and output channels in the depthwise separable convolutions. It's used to reduce the model's complexity and size. A depth multiplier of 1.0 means no reduction, while a depth multiplier less than 1.0 (such as 0.35) reduces the number of channels in each layer.
 Dropout rate is 0.1 in all models.
 
-Pretrained models
+## Dataset
+The code of the data taken from the openMV is availble in the collect_data.py. To download dataset go the the link.
+
+### Pretrained models comparison 
+The Status indcate the working or not working on the openMV.
 
 | Model        | Input shape | Depth-Multiplier|   FPS      | Training acc | epochs | Status      |  Reson                         |
 | ------------ | ----------- | --------------- | ---------- | ------------ | ------ | ----------- | ------------------------------ |
@@ -17,7 +20,7 @@ Pretrained models
 | Mobilenet v1 | 96*96       |      0.2        |   21.7     |  80.5%       |  20    | Working     |     -                          |
 | Mobilenet v1 | 96*96       |      0.25       |   19.9     |  75.6%       |  20    | Working     |     -                          |
 
-Custom  models
+### Custom  models comparison 
 
 | Model        | Input shape |  Conv layers | kernel  |   Filters           |   FLOPS  |   FPS    | Training acc | epochs |  Status     |  Reson                         |
 | ------------ | ----------- | ------------ | ------- | ------------------- | -------- | -------- | ------------ | ------ | ----------- | ------------------------------ |
