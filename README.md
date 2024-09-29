@@ -1,7 +1,8 @@
 # Classification-on-openmv
-<br>
+
 ## Benchmarks on OpenMV
 Include the benchmark results of model trained on edge impulse.The models are pretrained and finetuned on coustom data taken by OpenMV. <br>
+
 **Depth Multiplier:**  MobileNet introduces a depth multiplier parameter that controls the number of input and output channels in the depthwise separable convolutions. It's used to reduce the model's complexity and size. A depth multiplier of 1.0 means no reduction, while a depth multiplier less than 1.0 (such as 0.35) reduces the number of channels in each layer.
 Dropout rate is 0.1 in all models.<br>
 
