@@ -1,18 +1,22 @@
 # Classification-on-openmv
 
 ## Benchmarks on OpenMV
-Include the benchmark results of model trained on edge impulse.The models are pretrained and finetuned on coustom data taken by OpenMV. <br>
+Include the benchmark results of model trained on edge impulse.The models are pretrained and fine tuned on custom data taken by OpenMV. <br>
 
-**Depth Multiplier:**  MobileNet introduces a depth multiplier parameter that controls the number of input and output channels in the depthwise separable convolutions. It's used to reduce the model's complexity and size. A depth multiplier of 1.0 means no reduction, while a depth multiplier less than 1.0 (such as 0.35) reduces the number of channels in each layer.
+**Depth Multiplier:**  MobileNet introduces a depth multiplier parameter that controls the number of input and output channels in the depth wise separable convolutions. It's used to reduce the model's complexity and size. A depth multiplier of 1.0 means no reduction, while a depth multiplier less than 1.0 (such as 0.35) reduces the number of channels in each layer.
 Dropout rate is 0.1 in all models.<br>
 
 ## Dataset
-The code of the data taken from the openMV is availble in the collect_data.py. To download dataset go the the [zip files](https://github.com/Abdulrehmanghani/Classification-on-openmv/blob/main/data_collection.py).<br>
+The code of the data taken from the openMV is available in the collect_data.py. To download dataset go the the [zip files](https://github.com/Abdulrehmanghani/Classification-on-openmv/blob/main/data_collection.py).<br>
 
-### Pretrained models comparison 
-The Status indcate the model deployed or not on the openMV.<br>
+## Model training and conversion 
+The steps to train and convert the model is avalible in the repository [Edge Impulse Image Classification Model for OpenMV H7](https://github.com/Abdulrehmanghani/Edge-Impulse-Image-Classification-Model-for-OpenMV-H7) .<br>
 
-**Note:** This states are only for the coldrinks dataset.<br> 
+## Pretrained models comparison 
+The Status indicates the model deployed or not on the openMV.<br>
+
+**Note:** These states are only for the cold drinks dataset.<br> 
+
 
 | Model        | Input shape | Depth-Multiplier|   FPS      | Training acc | epochs | Status      |  Reson                         |
 | ------------ | ----------- | --------------- | ---------- | ------------ | ------ | ----------- | ------------------------------ |
@@ -23,7 +27,7 @@ The Status indcate the model deployed or not on the openMV.<br>
 | Mobilenet v1 | 96*96       |      0.2        |   21.7     |  80.5%       |  20    | Working     |     -                          |
 | Mobilenet v1 | 96*96       |      0.25       |   19.9     |  75.6%       |  20    | Working     |     -                          |
 
-### Custom  models comparison <br> <br>
+## Custom  models comparison <br> <br>
 
 | Model        | Input shape |  Conv layers | kernel  |   Filters           |   FLOPS  |   FPS    | Training acc | epochs |  Status     |  Reson                         |
 | ------------ | ----------- | ------------ | ------- | ------------------- | -------- | -------- | ------------ | ------ | ----------- | ------------------------------ |
